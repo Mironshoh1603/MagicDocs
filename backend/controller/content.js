@@ -7,7 +7,22 @@ const getAllContent = catchErrorAsync(async (req, res, next) => {
       .populate({ path: "userId", select: "name -_id" })
       .populate({ path: "levelId", select: "name  -_id" })
       .populate({ path: "littleId", select: "name " })
-      .populate({ path: "bigId", select: "name " });
+      .populate({ path: "bigId", select: "name " })
+      .populate({ path: "salom", select: "rating userId -_id -contentId" })
+      .exec(function (err, showMovie) {
+         if (err) {
+            console.log(err);
+         } else {
+            console.log(showMovie);
+            var total = 0;
+            // for (var i = 0; i < showMovie.comments.length; i++) {
+            //    total += showMovie.comments[i].rating;
+            // }
+            // var avg = total / showMovie.comments.length;
+            // res.render("show", { movie: showMovie, ratingAverage: avg });
+         }
+      });
+
    res.status(200).json({ success: true, data });
 });
 

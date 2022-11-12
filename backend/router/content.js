@@ -10,4 +10,9 @@ router
    .route("/content")
    .get(ContentController.getAllContent)
    .post(Isauthentication, authoriseRoles("ADMIN"), ContentController.createContent);
+
+router
+   .route("/content/:id")
+   .delete(Isauthentication, authoriseRoles("ADMIN"), ContentController.deleteContent)
+   .patch(Isauthentication, authoriseRoles("ADMIN"), ContentController.updateContent);
 module.exports = router;

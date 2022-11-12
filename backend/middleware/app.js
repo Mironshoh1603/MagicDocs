@@ -9,6 +9,8 @@ const expressupload = require("express-fileupload");
 const bigCategoryRouter = require("../router/bigcategory");
 const littlecategory = require("../router/littleRouter");
 const contentRouter = require("../router/content");
+const commentRouter = require("../router/comment");
+const ratingRouter = require("../router/rating");
 
 const levelRouter = require("../router/levelRouter");
 app.use(express.json());
@@ -21,6 +23,8 @@ app.use("/api/v1", bigCategoryRouter);
 app.use("/api/v1", levelRouter);
 app.use("/api/v1", littlecategory);
 app.use("/api/v1", contentRouter);
+app.use("/api/v1", commentRouter);
+app.use("/api/v1", ratingRouter);
 
 app.use(errorController);
 
