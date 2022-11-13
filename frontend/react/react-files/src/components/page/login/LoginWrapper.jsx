@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 
 function LoginWrapper() {
-   const history = useHistory();
+   const history = useNavigate();
    const dispatch = useDispatch();
    const haldleSubmit = (e) => {
       e.preventDefault();
@@ -24,7 +24,8 @@ function LoginWrapper() {
    const shoot = async () => {
       console.log(email);
       dispatch(loginUser(email, password));
-      
+      history("/")
+
    };
    return (
       <>
