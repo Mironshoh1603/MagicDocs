@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Link, useHistory, useNavigate } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import axios from "axios";
 import { loginUser } from "../../Actions/User";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 
 function LoginWrapper() {
-   const history = useNavigate();
+   const history = useHistory();
    const dispatch = useDispatch();
    const haldleSubmit = (e) => {
       e.preventDefault();
@@ -24,8 +24,7 @@ function LoginWrapper() {
    const shoot = async () => {
       console.log(email);
       dispatch(loginUser(email, password));
-      history("/")
-
+      
    };
    return (
       <>
