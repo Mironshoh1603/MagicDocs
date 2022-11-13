@@ -6,6 +6,6 @@ DB();
 
 const app = require("./middleware/app");
 
-PORT = process.env.PORT || 6000;
+PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () => console.log(`server ishladi  ${process.env.PORT}`.yellow.bold.underline));

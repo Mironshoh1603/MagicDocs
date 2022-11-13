@@ -7,6 +7,7 @@ const jwtToken = require("../utils/jwtToken");
 const sendEmail = require("../utils/sendEmail.js");
 const crypto = require("crypto");
 const sendToken = require("../utils/jwtToken");
+const { log } = require("console");
 
 //registratsiya qilish
 
@@ -32,6 +33,7 @@ const registerUser = catchErrorAsync(async (req, res, next) => {
 const Login = catchErrorAsync(async (req, res, next) => {
    const { email, password } = req.body;
 
+   console.log(email);
    if (!email || !password) {
       return next(new AppError("siz email yoki passwordni kiritmadiz"));
    }

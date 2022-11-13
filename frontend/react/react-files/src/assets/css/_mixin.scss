@@ -1,0 +1,165 @@
+// flex-box==========================
+@mixin flex($position){
+    display: flex;
+    justify-content: $position;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+@mixin select-homeOne{
+    .css-1s2u09g-control,.css-1pahdxg-control{
+        width: 125px;
+        box-shadow: none;
+        border: none;
+        padding-bottom: 12px;
+        background-color: #08BEAB;
+        border-color: #08BEAB;
+        border-radius:0px 5px 5px 0px;
+        min-height: 38px;
+        padding: 11px 0px;
+      }
+      .css-1okebmr-indicatorSeparator{
+        background: none;
+      }
+      .css-qc6sy-singleValue,
+      .css-14el2xx-placeholder,
+      .css-tlfecz-indicatorContainer{
+        color: #fff;
+      }
+}
+
+@mixin selectYello{
+    .css-1s2u09g-control,.css-1pahdxg-control{
+        width: 125px;
+        box-shadow: none;
+        border: none;
+        padding-bottom: 12px;
+        background-color: #F1962F;
+        border-color: #F1962F;
+        border-radius: 0px 30px 30px 0px;
+        min-height: 38px;
+        padding: 11px 0px;
+      }
+      .css-1okebmr-indicatorSeparator{
+        background: none;
+      }
+      .css-qc6sy-singleValue,
+      .css-14el2xx-placeholder,
+      .css-tlfecz-indicatorContainer{
+        color: #fff;
+      }
+}
+@mixin select{
+    .css-1s2u09g-control,.css-1pahdxg-control{
+
+        box-shadow: none;
+        border: none;
+        background-color: transparent;
+        border-color: none;
+        // border-radius: 0px 30px 30px 0px;
+        height: auto;
+        cursor: pointer;
+
+
+      }
+      .css-1okebmr-indicatorSeparator{
+        background: none;
+      }
+      .css-qc6sy-singleValue,
+      .css-14el2xx-placeholder,
+      .css-tlfecz-indicatorContainer{
+        color: #333;
+        padding: 0;
+      }
+}
+@mixin ForamSelect{
+    .css-1s2u09g-control,.css-1pahdxg-control{
+
+        box-shadow: none;
+        border: none;
+        background-color: transparent;
+        border-color: none;
+        // border-radius: 0px 30px 30px 0px;
+        height: auto;
+        cursor: pointer;
+
+
+      }
+      .css-1okebmr-indicatorSeparator{
+        background: none;
+      }
+      .css-qc6sy-singleValue,
+      .css-14el2xx-placeholder,
+      .css-tlfecz-indicatorContainer{
+        color: #333;
+        padding: 0;
+      }
+}
+// responsive==========================
+// xl-device=====
+@mixin xxl-down-device{
+    @media (max-width:1399px){
+        @content;
+    }
+}
+
+@mixin xl-down-device{
+    @media (max-width:1199px){
+        @content;
+    }
+}
+
+@mixin xl-device{
+    @media (min-width:1200px) and (max-width:1399px){
+        @content;
+    }
+}
+
+@mixin lg-device{
+    @media (min-width:992px) and (max-width:1199px){
+        @content;
+    }
+}
+@mixin lg-up-device{
+    @media (min-width:992px){
+        @content;
+    }
+}
+
+@mixin lg-down-device{
+    @media (max-width:991px){
+        @content;
+    }
+}
+
+// md-device============
+@mixin md-device{
+    @media (min-width:768px) and (max-width:991px){
+        @content;
+    }
+}
+@mixin md-up-device{
+    @media (min-width:768px){
+        @content;
+    }
+}
+
+@mixin md-down-device{
+    @media (max-width:767px){
+        @content;
+    }
+}
+
+// sm-device
+@mixin sm-device{
+    @media (min-width: 576px) and (max-width:768px){
+        @content;
+    }
+}
+
+@mixin sm-down-device{
+    @media (max-width:576px){
+        @content;
+    }
+}

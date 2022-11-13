@@ -13,7 +13,10 @@ const getAllContent = catchErrorAsync(async (req, res, next) => {
          if (err) {
             console.log(err);
          } else {
-            console.log(showMovie);
+            console.log(
+               "sasasasas",
+               showMovie.map((val) => val.salom.map((r) => r.rating.flat()))
+            );
             var total = 0;
             // for (var i = 0; i < showMovie.comments.length; i++) {
             //    total += showMovie.comments[i].rating;

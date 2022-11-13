@@ -5,6 +5,7 @@ const cookie = require("cookie-parser");
 const bodyParser = require("body-parser");
 const userRouter = require("../router/user");
 const expressupload = require("express-fileupload");
+const cors = require("cors");
 
 const bigCategoryRouter = require("../router/bigcategory");
 const littlecategory = require("../router/littleRouter");
@@ -17,6 +18,7 @@ app.use(express.json());
 app.use(expressupload());
 // app.use(express.urlencoded({ extended: true }));
 app.use(cookie());
+app.use(cors());
 
 app.use("/api/v1", userRouter);
 app.use("/api/v1", bigCategoryRouter);
